@@ -14,10 +14,9 @@ A personal website about Philippe Baetens, who owns this repo and is the user yo
 
 The content comes from:
 - GitHub: https://github.com/phili-b. The profile bio, the `fiepfiep` profile README and the READMEs of his own (non-fork) repos, plus his fork `fast-openISP-gui`, which he substantially extended. The avatar is loaded from his GitHub avatar URL.
-- LinkedIn: https://www.linkedin.com/in/philippebaetens/. It blocks automated fetching, so the job title and education are from search snippets and still need Philippe to confirm them.
+- CV: `cv_philippe_baetens_2025.pdf` (gitignored, kept local only). This is the authoritative source for job titles, dates, education and skills. Never publish its home address, phone number or family details.
+- LinkedIn: https://www.linkedin.com/in/philippebaetens/. Linked only; it blocks automated fetching.
 - Featured projects, chosen by Philippe: `ams-OSRAM/mira220_v4l2_driver` (plus the upstream LKML patch series for the Mira220 and Mira016), `phili-b/teensy_naneyeC` and `phili-b/fast-openISP-gui`. The kernel patches are under review, so don't describe them as merged unless Philippe says they are.
-
-`<!-- TODO -->` comments in `index.html` mark unverified content and content still to fill in from LinkedIn.
 
 ## Content rules
 

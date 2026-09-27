@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A personal website about Philippe Baetens, who owns this repo and is the user you are working with. It's a single static page with no build step: `index.html` holds the content and `styles.css` holds the styles. Light and dark themes come from `prefers-color-scheme`, driven by CSS variables on `:root`. It's meant for GitHub Pages hosting (Philippe already has a `fiepfiep.github.io` repo).
+A personal website about Philippe Baetens, who owns this repo and is the user you are working with. It's a single static page with no build step or framework (Philippe chose plain HTML/CSS; don't introduce one). `index.html` holds the content, `styles.css` the styles, and `script.js` the scroll-reveal and the animated RGGB Bayer-mosaic canvas in the hero. Light and dark themes come from `prefers-color-scheme` via CSS variables on `:root`; `--r`/`--g`/`--b` are the Bayer colours used throughout. Motion respects `prefers-reduced-motion`. Fonts (Inter, JetBrains Mono) load from Google Fonts.
+
+Hosted on GitHub Pages from `main` of https://github.com/phili-b/phili-b.github.io, live at https://phili-b.github.io. Pushing to `main` deploys.
 
 ## Commands
 

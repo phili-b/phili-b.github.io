@@ -5,35 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Philippe Baetens</title>
   <meta name="description" content="Philippe Baetens, Sr. Staff Solutions Engineer at ams OSRAM: image sensors, Linux V4L2 drivers, Python and colour science.">
+  <meta property="og:title" content="Philippe Baetens">
+  <meta property="og:description" content="Image sensors, Linux V4L2 drivers, Python and colour science.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/17198345?v=4&s=400">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/17198345?v=4&s=64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/17198345?v=4&s=320" alt="Philippe Baetens" width="160" height="160">
-    <div>
-      <h1>Philippe Baetens</h1>
-      <p class="tagline">Sr. Staff Solutions Engineer at ams OSRAM, Antwerp, Belgium</p>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="brand" href="#top">PB<span>.</span></a>
+      <div class="navlinks">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <canvas id="bayer" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/17198345?v=4&s=320" alt="Philippe Baetens" width="152" height="152">
+      <p class="eyebrow mono">/dev/video0 · Antwerp, Belgium</p>
+      <h1>Philippe <span class="grad">Baetens</span></h1>
+      <p class="tagline">Sr. Staff Solutions Engineer at ams OSRAM</p>
       <p class="lede">I build evaluation solutions for the Mira image sensor family, from PCB to web interface and everything in between: Linux drivers, image pipeline tuning, Python applications and colour science.</p>
-      <nav class="links">
-        <a href="https://github.com/phili-b">GitHub</a>
-        <a href="https://www.linkedin.com/in/philippebaetens/">LinkedIn</a>
-      </nav>
+      <div class="links">
+        <a class="btn primary" href="https://github.com/phili-b">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/philippebaetens/">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M0 1.15C0 .52.52 0 1.18 0h13.64C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.18 1.15H1.18C.52 16 0 15.48 0 14.85V1.15zM4.94 13.4V6.17H2.542v7.23H4.94zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.01-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01zm4.91 8.22V9.36c0-.22.02-.43.08-.59.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.03h-.02l.02-.03V6.17h-2.4c.03.68 0 7.23 0 7.23h2.4z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <ul class="stats">
+        <li><strong>2019</strong><span>at ams OSRAM</span></li>
+        <li><strong>2×</strong><span>MSc, KU Leuven</span></li>
+        <li><strong>V4L2</strong><span>sensor drivers</span></li>
+      </ul>
     </div>
   </header>
 
   <main>
-    <section>
-      <h2>About</h2>
-      <p>I'm passionate about computer vision, the Linux kernel, embedded systems, computer networks, and analog and digital electronics design. I hold a Master's in Electronics Engineering and a Master's in Artificial Intelligence, both from KU Leuven. I'm result-driven, customer-oriented and always eager to learn.</p>
-      <p>In my spare time I play tennis and tinker with electronics and hobby projects: a neural network for access control, a Docker-based smart home lab, and a smartphone-controlled garage door.</p>
+    <section class="reveal" id="about">
+      <h2><span class="num mono">01</span>About</h2>
+      <div class="prose">
+        <p>I'm passionate about computer vision, the Linux kernel, embedded systems, computer networks, and analog and digital electronics design. I hold a Master's in Electronics Engineering and a Master's in Artificial Intelligence, both from KU Leuven. I'm result-driven, customer-oriented and always eager to learn.</p>
+        <p>In my spare time I play tennis and tinker with electronics and hobby projects: a neural network for access control, a Docker-based smart home lab, and a smartphone-controlled garage door.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Experience</h2>
-      <ul class="timeline">
+    <section class="reveal" id="work">
+      <h2><span class="num mono">02</span>Featured work</h2>
+      <ul class="cards">
+        <li class="card">
+          <div class="card-top"><span class="chip r">kernel</span></div>
+          <h3>Mira220 Linux driver</h3>
+          <p>A V4L2 subdevice driver for the ams OSRAM Mira220, a 1600×1400 global shutter sensor. It supports mono and RGB at 8, 10 and 12 bits, up to 1500 Mbit/s per lane and 90 fps, with device tree overlays for Raspberry Pi. I'm upstreaming it to the Linux media subsystem, alongside a driver for the Mira016.</p>
+          <p class="tags mono">C · Linux kernel · V4L2 · device tree</p>
+          <div class="card-links"><a href="https://github.com/ams-OSRAM/mira220_v4l2_driver">Code →</a><a href="https://lkml.org/lkml/2025/9/20/412">Upstream patches →</a></div>
+        </li>
+        <li class="card">
+          <div class="card-top"><span class="chip g">ISP</span></div>
+          <h3>fast-openISP GUI</h3>
+          <p>A software image signal processor with a Windows desktop GUI, built on fast-openISP. It loads raw Bayer images (RAW, TIFF, DNG), runs 17 switchable ISP blocks with a live preview and before/after split view, and calibrates the colour correction matrix on a ColorChecker, reporting ΔE2000 per patch. It ships as a single exe, with a CLI and a typed Python API.</p>
+          <p class="tags mono">Python · image processing · colour science</p>
+          <div class="card-links"><a href="https://github.com/phili-b/fast-openISP-gui">Code →</a><a href="https://phili-b.github.io/fast-openISP-gui/">Docs →</a><a href="https://github.com/phili-b/fast-openISP-gui/releases/latest">Download →</a></div>
+        </li>
+        <li class="card">
+          <div class="card-top"><span class="chip b">embedded</span></div>
+          <h3>Teensy NanEyeC</h3>
+          <p>Streams 320×320 mono or colour images from an ams OSRAM NanEyeC to a PC through a Teensy 4.1, over the sensor's single-ended SEIM interface. It runs at 35.5 fps with no lost frames, and does demosaicing, white balance and gamma correction on the host. I built it with Claude Code.</p>
+          <p class="tags mono">C++ · Python · Teensy · embedded</p>
+          <div class="card-links"><a href="https://github.com/phili-b/teensy_naneyeC">Code →</a><a href="https://phili-b.github.io/teensy_naneyeC/">Docs →</a></div>
+        </li>
+      </ul>
+
+      <h3 class="subhead">Other projects</h3>
+      <ul class="cards compact">
+        <li class="card">
+          <h3>rgb-ir</h3>
+          <p>Remosaics RGB-IR sensor data into a standard Bayer mosaic plus an IR image, for processing in darktable or Lightroom. Includes a Mira220 RGB and RGB-IR dataset.</p>
+          <div class="card-links"><a href="https://github.com/phili-b/rgb-ir">Code →</a></div>
+        </li>
+        <li class="card">
+          <h3>smartcarproject</h3>
+          <p>An Arduino-based smart car kit, with demo code, a manual and a presentation.</p>
+          <div class="card-links"><a href="https://github.com/phili-b/smartcarproject">Code →</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="reveal" id="experience">
+      <h2><span class="num mono">03</span>Experience</h2>
+      <ol class="timeline">
         <li>
-          <div class="role"><h3>Sr. Staff Solutions Engineer · ams OSRAM</h3><span class="when">2019 – present · Antwerp</span></div>
+          <span class="when mono">2019 – present · Antwerp</span>
+          <h3>Sr. Staff Solutions Engineer <span class="at">@ ams OSRAM</span></h3>
           <ul>
             <li>Application and design-in support for high-end customers, and technical training for distributors and customers.</li>
             <li>Developed a full evaluation solution for the Mira image sensor family: PCB, Linux kernel drivers (Raspberry Pi, NXP i.MX, Qualcomm), image pipeline tuning with Imatest, Python applications, web applications and APIs.</li>
@@ -42,84 +118,49 @@
           </ul>
         </li>
         <li>
-          <div class="role"><h3>Consultant at Altran · Nokia</h3><span class="when">2019 · Antwerp</span></div>
+          <span class="when mono">2019 · Antwerp</span>
+          <h3>Consultant at Altran <span class="at">@ Nokia</span></h3>
           <ul><li>Wrote offline test software for custom ASICs used in network devices, in a Linux environment.</li></ul>
         </li>
         <li>
-          <div class="role"><h3>Junior Consultant at Altran · ON Semiconductor</h3><span class="when">2017 – 2018 · Mechelen</span></div>
+          <span class="when mono">2017 – 2018 · Mechelen</span>
+          <h3>Junior Consultant at Altran <span class="at">@ ON Semiconductor</span></h3>
           <ul><li>Developed Python test software to run a CMOS image sensor tester on wafer probe.</li></ul>
         </li>
-      </ul>
+      </ol>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul class="timeline">
+    <section class="reveal" id="education">
+      <h2><span class="num mono">04</span>Education</h2>
+      <ol class="timeline">
         <li>
-          <div class="role"><h3>Master in Artificial Intelligence (ECS) · KU Leuven</h3><span class="when">2016 – 2017 · Heverlee</span></div>
+          <span class="when mono">2016 – 2017 · Heverlee</span>
+          <h3>Master in Artificial Intelligence (ECS) <span class="at">@ KU Leuven</span></h3>
           <p>Neural networks and deep learning, computer vision, machine learning and robotics. Thesis on brain-computer interfaces to enable communication with paralysed people.</p>
         </li>
         <li>
-          <div class="role"><h3>Master of Science in Electronics Engineering · KU Leuven</h3><span class="when">2012 – 2016 · Campus De Nayer</span></div>
+          <span class="when mono">2012 – 2016 · Campus De Nayer</span>
+          <h3>MSc in Electronics Engineering <span class="at">@ KU Leuven</span></h3>
           <p>Software engineering and digital design, with a research group specialised in embedded AI vision. Thesis on RFID design at Agfa-Gevaert.</p>
         </li>
-      </ul>
+      </ol>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Image sensors</dt><dd>Sensor characterisation, PTC and QE measurements, MTF, Imatest, colour science, ISP pipelines</dd>
-        <dt>Programming</dt><dd>Python, C, Linux drivers, OpenCV, TensorFlow, Qt, Java, Matlab, VHDL, Assembly</dd>
-        <dt>Embedded</dt><dd>Raspberry Pi, NXP i.MX8, Qualcomm, Nvidia Jetson, Arduino, FPGA (Xilinx Virtex)</dd>
-        <dt>Web</dt><dd>HTML5, CSS, PHP, Flask</dd>
-        <dt>Languages</dt><dd>Dutch (native), English (proficient), French (good)</dd>
-      </dl>
-    </section>
-
-    <section>
-      <h2>Featured work</h2>
-      <ul class="cards">
-        <li>
-          <h3>Mira220 Linux driver</h3>
-          <p>A V4L2 subdevice driver for the ams OSRAM Mira220, a 1600×1400 global shutter sensor. It supports mono and RGB at 8, 10 and 12 bits, up to 1500 Mbit/s per lane and 90 fps, with device tree overlays for Raspberry Pi. I'm upstreaming it to the Linux media subsystem, alongside a driver for the Mira016.</p>
-          <span class="tags">C · Linux kernel · V4L2 · device tree</span>
-          <a href="https://github.com/ams-OSRAM/mira220_v4l2_driver">Code</a> · <a href="https://lkml.org/lkml/2025/9/20/412">Upstream patches</a>
-        </li>
-        <li>
-          <h3>fast-openISP GUI</h3>
-          <p>A software image signal processor with a Windows desktop GUI, built on fast-openISP. It loads raw Bayer images (RAW, TIFF, DNG), runs 17 switchable ISP blocks with a live preview and before/after split view, and calibrates the colour correction matrix on a ColorChecker, reporting ΔE2000 per patch. It ships as a single exe, with a CLI and a typed Python API.</p>
-          <span class="tags">Python · image processing · colour science</span>
-          <a href="https://github.com/phili-b/fast-openISP-gui">Code</a> · <a href="https://phili-b.github.io/fast-openISP-gui/">Docs</a> · <a href="https://github.com/phili-b/fast-openISP-gui/releases/latest">Download</a>
-        </li>
-        <li>
-          <h3>Teensy NanEyeC</h3>
-          <p>Streams 320×320 mono or colour images from an ams OSRAM NanEyeC to a PC through a Teensy 4.1, over the sensor's single-ended SEIM interface. It runs at 35.5 fps with no lost frames, and does demosaicing, white balance and gamma correction on the host. I built it with Claude Code.</p>
-          <span class="tags">C++ · Python · Teensy · embedded</span>
-          <a href="https://github.com/phili-b/teensy_naneyeC">Code</a> · <a href="https://phili-b.github.io/teensy_naneyeC/">Docs</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Other projects</h2>
-      <ul class="cards compact">
-        <li>
-          <h3>rgb-ir</h3>
-          <p>Remosaics RGB-IR sensor data into a standard Bayer mosaic plus an IR image, for processing in darktable or Lightroom. Includes a Mira220 RGB and RGB-IR dataset.</p>
-          <a href="https://github.com/phili-b/rgb-ir">Code</a>
-        </li>
-        <li>
-          <h3>smartcarproject</h3>
-          <p>An Arduino-based smart car kit, with demo code, a manual and a presentation.</p>
-          <a href="https://github.com/phili-b/smartcarproject">Code</a>
-        </li>
-      </ul>
+    <section class="reveal" id="skills">
+      <h2><span class="num mono">05</span>Skills</h2>
+      <div class="skillgrid">
+        <div><h3>Image sensors</h3><ul class="pills"><li>Sensor characterisation</li><li>PTC</li><li>QE</li><li>MTF</li><li>Imatest</li><li>Colour science</li><li>ISP pipelines</li></ul></div>
+        <div><h3>Programming</h3><ul class="pills"><li>Python</li><li>C</li><li>Linux drivers</li><li>OpenCV</li><li>TensorFlow</li><li>Qt</li><li>Java</li><li>Matlab</li><li>VHDL</li><li>Assembly</li></ul></div>
+        <div><h3>Embedded</h3><ul class="pills"><li>Raspberry Pi</li><li>NXP i.MX8</li><li>Qualcomm</li><li>Nvidia Jetson</li><li>Arduino</li><li>FPGA (Xilinx Virtex)</li></ul></div>
+        <div><h3>Web</h3><ul class="pills"><li>HTML5</li><li>CSS</li><li>PHP</li><li>Flask</li></ul></div>
+        <div><h3>Languages</h3><ul class="pills"><li>Dutch (native)</li><li>English (proficient)</li><li>French (good)</li></ul></div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© Philippe Baetens</p>
+    <div class="bayer-strip" aria-hidden="true"></div>
+    <p>© Philippe Baetens · <a href="https://github.com/phili-b/phili-b.github.io">Source</a></p>
   </footer>
 </body>
 </html>
